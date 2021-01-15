@@ -17,6 +17,7 @@ public class QuadraticEquation {
     }
 
     public List<Double> getRoots() {
+        assert a != 0;
         if (getDiscriminant() > 0) {
             roots.add(getRootOne());
             roots.add(getRootTwo());
@@ -29,14 +30,17 @@ public class QuadraticEquation {
     }
 
     public Double getRootOne() {
+        assert a != 0;
         return ((-b + sqrt((getDiscriminant()))) / (2 * a));
     }
 
     public Double getRootTwo() {
+        assert a != 0;
         return ((-b - sqrt((getDiscriminant()))) / (2 * a));
     }
 
     public Double getDiscriminant() {
+        assert a != 0;
         return b * b - 4 * a * c;
     }
 }
